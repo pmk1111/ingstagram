@@ -1,0 +1,203 @@
+@charset "UTF-8";
+
+@media(max-width: 875px){
+	.phone{
+		display:none !important;
+	}
+}
+
+.phone{
+	position:relative;
+	display: flex;
+}
+
+.slide-img{
+	position: absolute;
+	top: 4%;
+  right: 12.7%;
+  display: none;
+}
+
+.logo-txt-area{
+	margin: 36px 0px 12px 
+}
+
+.logo-text {
+	background-position: 0px 0px;
+	background-size: 176px 186px;
+	width: 176px;
+	height: 50px
+}
+
+._ab1y {
+	color: rgb(var(- -ig-primary-text));
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	justify-content: center;
+	margin-top: 12px;
+	max-width: 350px;
+}
+
+._ab21 {
+	align-items: center;
+	border: 1px solid #dbdbdb;
+	border-radius: 2px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+	font: inherit;
+	font-size: 100%;
+	margin: 0 0 10px;
+	padding: 10px 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+._ab3a {
+	margin-bottom: 10px;
+	max-width: 350px;
+	width: 100%;
+}
+
+.flex {
+	display: flex;
+	flex-direction: column;
+	align-items: center
+}
+
+.flex2{
+	border: 0;
+  display: flex;
+  flex-direction: column;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+.flex-article{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin-top:32px;
+	padding-bottom: 32px
+}
+
+.login-area{
+	margin-top: 24px;
+}
+
+.login-input {
+	box-sizing: content-box;
+	width: 75%;
+	height: 20px;
+	margin-bottom: 6px;
+	padding: 9px 8px 7px;
+	border-radius: 3px;
+	border: 1px solid #dbdbdb;
+	background-color: #FAFAFA
+}
+
+.submit{ 
+	width: 80%;
+	height: 32px;
+	margin: 8px 10%;
+
+}
+
+.submit-btn{
+	width: 100%;
+	height: 32px;
+	border-style:none;
+	border-radius: 8px;
+	background-color: #8ab4f3;
+	color:white;
+	font-size:15px;
+	font-weight: 900
+}
+
+.or{
+	display:flex;
+	align-items: center;
+	width: 80%;
+	height: 15px;
+	margin: 10px 10% 18px;
+}
+
+.line{
+	box-sizing:border-box;
+	width: 40%;
+	height:1px;
+  border-bottom: 1px solid;
+  border-color: #dbdbdb;
+}
+
+.or-text{
+	width:26px;
+	margin: 0 18px;
+	color: #737373;
+	font-size: 12px;
+	font-weight: 700;
+}
+
+.facebook-login{
+	display: flex;
+	align-items: center;
+	margin: 8px 0
+}
+
+.submit-facebook{
+	display: flex;
+	align-items: center;
+	background-color: white;
+	border-style: none;
+}
+
+.submit-facebook:hover{
+	cursor:pointer;
+	opacity: .8;
+	transition: .3s;
+}
+
+.facebook-icon{
+	display:inline-block;
+	margin-right: 3px;
+	width: 20px;
+}
+
+.facebook-txt{
+	display: inline-block;
+	color: #385185;
+	font-size:14px;
+	font-weight: 600
+}
+
+.forgot-pw{
+	display:inline-block;
+	width: 100%;
+	margin-top: 12px;
+	text-align: center;
+}
+
+.forgot-pw-txt{
+	display: inline-block;
+	color: #385185;
+	font-size:12px;
+}
+
+.join-txt{
+	font-size:14px;
+}
+
+.go-join{
+	text-decoration: none;
+	color: #0095F6;
+	font-weight: 600
+}
+
+.hidden{
+	display: none;
+}
