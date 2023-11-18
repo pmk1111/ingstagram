@@ -26,7 +26,8 @@
 	background-position: 0px 0px;
 	background-size: 176px 186px;
 	width: 176px;
-	height: 50px
+	height: 50px;
+	cursor: pointer;
 }
 
 ._ab1y {
@@ -98,7 +99,8 @@
 	padding: 9px 8px 7px;
 	border-radius: 3px;
 	border: 1px solid #dbdbdb;
-	background-color: #FAFAFA
+	background-color: #FAFAFA;
+	outline: none;
 }
 
 .submit{ 
@@ -117,6 +119,15 @@
 	color:white;
 	font-size:15px;
 	font-weight: 900
+}
+
+.active{
+	background-color:#0095F6
+}
+
+.active:hover{
+	cursor: pointer;
+	background-color:#1b74e4; 
 }
 
 .or{
@@ -143,7 +154,7 @@
 	font-weight: 700;
 }
 
-.facebook-login{
+.facebook-login, .login-fail{
 	display: flex;
 	align-items: center;
 	margin: 8px 0
@@ -168,11 +179,17 @@
 	width: 20px;
 }
 
-.facebook-txt{
+.facebook-txt, .login-fail-txt{
 	display: inline-block;
 	color: #385185;
 	font-size:14px;
 	font-weight: 600
+}
+
+.login-fail-txt{
+	display:none;
+	color: red;
+	font-weight: 500
 }
 
 .forgot-pw{

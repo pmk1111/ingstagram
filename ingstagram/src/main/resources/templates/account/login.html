@@ -32,8 +32,8 @@
 				<div class="_ab3a">
 					<form class="_ab3a flex2" action="">
 						<div class="flex login-area">
-							<input type="text" class="login-input" placeholder="전화번호, 사용자 이름 또는 이메일">
-							<input type="password" class="login-input" placeholder="비밀번호">		
+							<input type="text" class="login-input id" placeholder="전화번호, 사용자 이름 또는 이메일">
+							<input type="password" class="login-input password" placeholder="비밀번호">		
 							<div class="submit">
 								<button class="submit-btn">로그인</button>
 							</div>
@@ -47,7 +47,7 @@
 							<div class="facebook-login">
 								<button class="submit-facebook">
 									<img class="facebook-icon" th:src="@{'/assets/img/facebook.svg'}">
-										<span class="facebook-txt">Facebook으로 로그인</span>
+									<span class="facebook-txt">Facebook으로 로그인</span>
 								</button>
 							</div>
 
@@ -68,5 +68,6 @@
 		</div>
 	</div>
 	<!-- login-form end-->
+	<script type="text/javascript" th:src="@{'/assets/js/ingstagram.js'}"></script>
 </body>
 </html>

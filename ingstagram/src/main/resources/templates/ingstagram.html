@@ -12,10 +12,8 @@
 </head>
 <body>
 	<section>
-	
 		<main>
 			<article class="flex-article">
-				
 				<div class="phone">
 					<img alt="" th:src="@{'/assets/img/phone.png'}">
 					<img class="slide-img" th:src="@{'/assets/img/slide1.png'}" style="display: block">
@@ -23,60 +21,50 @@
 					<img class="slide-img" th:src="@{'/assets/img/slide3.png'}">
 					<img class="slide-img" th:src="@{'/assets/img/slide4.png'}">
 				</div>
-				
 				<!-- login-form -->
 				<div class="_ab1y">
 					<div class="_ab21">
 						<div class="logo-txt-area" aria-disabled="false" role="button">
 							<img class="logo-text" th:src="@{'/assets/img/logo-text.png'}" alt="Logo" />
 						</div>
-
 						<div class="_ab3a">
 							<form class="_ab3a flex2" action="">
 								<div class="flex login-area">
-									<input type="text" class="login-input" placeholder="전화번호, 사용자 이름 또는 이메일"> 
-									<input type="password" class="login-input" placeholder="비밀번호">
-										
+									<input type="text" class="login-input id" placeholder="전화번호, 사용자 이름 또는 이메일"> 
+									<input type="password" class="login-input password" placeholder="비밀번호">
 									<div class="submit">
-										<button class="submit-btn">로그인</button>
-									</div>
-									
+										<button type="button" class="submit-btn">로그인</button>
+									</div>									
 									<div class="or">
 										<div class="line"></div>
 										<div class="or-text">또는</div>
 										<div class="line"></div>
-									</div>
-									
+									</div>									
 									<div class="facebook-login">
 										<button class="submit-facebook">
 											<img class="facebook-icon" th:src="@{'/assets/img/facebook.svg'}">
 											<span class="facebook-txt">Facebook으로 로그인</span>
 										</button>
-									</div>
-									
+									</div>									
+									<div class="login-fail">
+										<span class="login-fail-txt">잘못된 비밀번호입니다. 다시 확인하세요.</span>
+									</div>									
 								</div>		
 									<a class="forgot-pw" href="#"><span class="forgot-pw-txt">비밀번호를 잊으셨나요?</span></a>
 							</form>
 						</div>
-					</div>
-					
+					</div>					
 					<div class="_ab21">
 						<span class="join">
 							<p class="join-txt">계정이 없으신가요? <a class="go-join" href="#">가입하기</a></p>
 						</span>
-					</div>
-					
+					</div>					
 				</div>
 				<!-- login-form end-->
-
 			</article>
 		</main>
 	</section>
-
 	<footer></footer>
-	
 	<script type="text/javascript" th:src="@{'/assets/js/ingstagram.js'}"></script>
-
-
 </body>
 </html>
