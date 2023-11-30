@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" th:href="@{'/assets/css/ingstagram.css'}" />
+<link rel="stylesheet" th:href="@{'/assets/css/setbirth.css'}" />
+<link rel="stylesheet" th:href="@{'/assets/css/verify.css'}" />
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+</head>
+<body>
+		<section class="verify" th:fragment="verify">
+		<main>
+			<article class="flex-article">
+				<div class="_ab1y">
+					<div class="_ab21">
+						<div class="content">
+						
+							<img class="mail-img" th:src="@{'/assets/img/mail.png'}">
+								<div class="mg-16-8">
+									<span class="h-11 verify-txt">인증코드 입력</span>
+								</div>
+								<div class="mg-16-16 flex">
+									<span class="f-14">sdgadg@adgd.com 주소로 전송된 인증 코드를 입력하세요. <span class="send-again">코드 재전송</span></span>
+								</div>
+								
+											
+							<div class="form-wrap w-100 mg-8">
+								<form method="post" action="">
+									<div class="code-wrap">
+										<input type="text" class="code p-4-12" name="code" placeholder="인증 코드" v-model="checkVerifyLength">
+									</div>
+									<div class="p-16 w-100">		
+										<button type="button" class="do-verify" :class="{ 'active': checkVerify }">다음</button>
+									</div>
+									<div class="back-to-birth">
+										<button type="button" class="go-birth-btn"
+														@click="backToBirth">돌아가기</button>
+									</div>
+								</form>
+							</div>
+							
+						</div>	
+					</div>				
+					<div class="_ab21">
+						<span class="join">
+							<p class="login-txt">
+								계정이 있으신가요? <a class="go-login" th:href="@{'/login'}">로그인</a>
+							</p>
+						</span>
+					</div>					
+				</div>
+				<!-- login-form end-->
+			</article>
+		</main>
+	</section>
+	<footer></footer>
+	<script type="text/javascript" th:src="@{'/assets/js/signup.js'}"></script>
+	
+</body>
+</html>

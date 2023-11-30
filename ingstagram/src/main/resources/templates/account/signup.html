@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8">
+<meta name="_csrf" content="${_csrf.token}">
+<meta name="_csrf_header" content="${_csrf.headerName}">
+<title>가입하기 • Ingstagram</title>
+<link id="contextPathHolder"
+	th:data-contextPath="${#httpServletRequest.getContextPath()}" />
+<link rel="icon" type="image/x-icon"
+	th:href="@{'/assets/favicon/instagram-favicon.svg'}" />
+<link rel="stylesheet" th:href="@{'/assets/css/ingstagram.css'}" />
+<link rel="stylesheet" th:href="@{'/assets/css/loading.css'}" />
+<link rel="stylesheet" th:href="@{'/assets/css/signup.css'}" />
+<link rel="stylesheet" th:href="@{'/assets/css/setbirth.css'}" />
+<link rel="stylesheet" th:href="@{'/assets/css/verify.css'}" />
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+<div class="app">
+	<div th:replace="~{fragments/loading :: loading}"></div>
+	<section class="flex info-layer">
+		<main class="main">
+			<div class="_ab1y">
+				<div class="_ab21">
+					<div class="logo-txt-area" aria-disabled="false" role="button">
+						<img class="logo-text" th:src="@{'/assets/img/logo-text.png'}"
+							alt="Logo" />
+					</div>
+					<div class="signup-to-see-content">
+						<span>친구들의 사진과 동영상을 보려면<br>가입하세요.
+						</span>
+					</div>
+
+					<div class="submit">
+						<button @mouseenter="changeIcon('_hover')" @mouseleave="changeIcon('')"  type="button" class="submit-fb">
+							<img class="facebook-icon" :src="iconPath">Facebook으로 로그인
+						</button>
+					</div>
+
+					<div class="or">
+						<div class="line"></div>
+						<div class="or-text">또는</div>
+						<div class="line"></div>
+					</div>
+
+					<div class="_ab3a">
+						<div class="_ab3a flex2" name="join">
+							<div class="flex login-area">					
+								<template v-for="(input, index) in inputs">
+  								<div class="login-wrap">
+    								<input :type="input.name === 'pw' ? 'password' : 'text'" 
+      										:class="{ 'after-check': input.isChecked, 'login-input': !input.isChecked, 'invalid': !input.isChecked }" 
+      										v-model="input.value" 
+      										@blur="validateInput(index)" 
+      										@focus="resetInput(index)"
+      										:name="input.name" 
+      										:placeholder="input.placeholder"
+      										v-if="input.name !== 'phone'"
+    								>
+    								<input :type="input.name === 'pw' ? 'password' : 'text'" 
+      										:class="{ 'after-check': input.isChecked, 'login-input': !input.isChecked, 'invalid': !input.isChecked }" 
+      										v-model="input.value" 
+      										@blur="validateInput(index)" 
+      										@focus="resetInput(index)"
+      										:name="input.name" 
+      										:placeholder="input.placeholder"
+      										v-else 
+  												@keyup="handlePhoneInput"
+    									>
+    								
+    								<div class="img-wrap" v-if="input.isChecked">
+      								<img class="input-check" 
+      										:src="input.isValid ? validate : invalidate"
+      										:style="{ width: input.isValid ? '22px' : '30px' }">
+    								</div>
+  								</div>
+								</template>
+							
+								<div class="notify">
+									<span>저희 서비스를 이용하는 사람이 회원님의 연락처<br>정보를 Instagram에 업로드했을 수도 있습니다.</span>
+								</div>
+								<div class="submit">
+									<button type="button" class="submit-btn" 
+										:class="{ 'active': isSubmitButtonActive }"
+										@click="saveAccountInfo">가입</button>
+								</div>
+							</div>
+							<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+						</div>
+					</div>
+				</div>
+				<div class="_ab21">
+					<span class="login">
+						<p class="login-txt">
+							계정이 있으신가요? <a class="go-login" th:href="@{'/login'}">로그인</a>
+						</p>
+					</span>
+				</div>
+			</div>
+		</main>
+		
+		<footer></footer>
+	</section>
+	<section th:replace="~{fragments/set-birth :: set-birth}"></section>
+	<section th:replace="~{fragments/verify :: verify}"></section>
+</div>
+	<script type="text/javascript" th:src="@{'/assets/js/signup.js'}"></script>
+	<script type="text/javascript" th:src="@{'/assets/js/loading.js'}"></script>
+
+	
+</body>
+</html>

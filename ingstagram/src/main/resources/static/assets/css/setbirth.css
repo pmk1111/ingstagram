@@ -1,0 +1,237 @@
+@charset "UTF-8";
+
+@keyframes open-modal{
+  from{
+  	width:440px;
+		height:374px;
+  }
+  to{
+    width:400px;
+		height:354px;
+  }
+}
+
+.set-birth {
+	display: none;
+}
+
+.set-birth-main {
+	height: 100vh;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 85%;
+	padding: 8px 28px
+}
+
+.cake {
+	width: 55%;
+}
+
+.h-11 {
+	display: flex;
+	align-items: center;
+	height: 11px;
+	font-size: 14px;
+}
+
+.add-birth-txt, .verify-txt {
+	font-weight: 600;
+}
+
+.mg-16-8 {
+	display: flex;
+	align-items: center;
+	margin: 16px 0 8px 0;
+}
+
+.modal-btn {
+	border-style: none;
+	background-color: transparent
+}
+
+.modal-btn:hover {
+	cursor: pointer;
+}
+
+.why-add-birth-txt {
+	font-size: 14px;
+	color: #0095F6
+}
+
+.why-add-birth-txt:active {
+	opacity: .6;
+}
+
+.mg-8-8 {
+	margin: 8px 0
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.birth-wrap {
+	display: flex;
+	align-items: center;
+}
+
+.birth-selector {
+	position: relative;
+	margin: 0 8px 8px 0;
+}
+
+.dropdown {
+	position: absolute;
+	top: 50%;
+	right: 8%;
+	transform: translate(0%, -50%);
+	width: 16px
+}
+
+.selector {
+	-webkit-appearance: none;
+	box-sizing: content-box;
+	border: 1px solid #ccd0d5;
+	border-radius: 3px;
+	width: 25.77px;
+	height: 34.22px;
+	padding: 0 24px 0 8px;
+	background-color: #FFFFFF;
+	color: #737373;
+	font-size: 11.5px;
+	outline: none;
+	z-index: 10
+}
+
+.mg-4-8 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 4px 0 8px 0;
+}
+
+.font-12 {
+	font-size: 12.5px;
+	color: #737373
+}
+
+.notify {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.inline-block {
+	display: inline-block;
+	text-align: center
+}
+
+.p-16-8 {
+	padding: 16px 8px;
+	margin: 0
+}
+
+.back-to-info, .back-to-birth {
+	margin-bottom: 8px;
+}
+
+.go-info-btn, .go-birth-btn, .send-again {
+	border-style: none;
+	background-color: transparent;
+	color: #0095F6;
+	font-weight: 700
+}
+
+.go-info-btn:hover, .go-birth-btn:hover, .send-again:hover {
+	cursor: pointer;
+	color: #1b74e4
+}
+
+.w-100 {
+	width: 100%
+}
+
+.birth-modal {
+	display:none;
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	bottom: 100vh;
+	z-index: 11;
+	width: 100%;
+}
+
+.birth-modal-overlay {
+	width: 100%;
+	height: 100vh;
+	background-color: black;
+	opacity: .5
+}
+
+.birth-modal-content {
+	display: flex;
+	flex-direction: column;
+	align-content: center; flex-wrap : wrap; position : absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width:400px;
+	height:354px;
+	min-width:400px;
+	min-height:354px;
+	background-color: white;
+	border-radius: 10px;
+	position: absolute;
+	flex-wrap: wrap;
+	animation-name: open-modal;
+	animation-duration:.1s;
+}
+
+.birth-modal-top {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-bottom: 1px solid lightgrey;
+	height: 5.01vh;
+}
+
+.close-modal{
+	position: absolute;
+	right: 4%;
+	cursor: pointer
+}
+
+.birth-modal-top span {
+	display: inline-block;
+	font-weight: 700;
+}
+
+.birth-modal-main {
+	display: flex;
+	margin: 20px 28px;
+	flex-direction: column;
+	align-content: center;
+	align-items: center;
+}
+
+.birth-modal-main img {
+	width: 46.5%;
+}
+
+.p-8 {
+	padding: 8px;
+}
+
+.p-8-12 {
+	padding: 8px 12px;
+}
+
+.mg-20-28 {
+	margin: 20px 28px;
+}

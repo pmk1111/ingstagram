@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+section {
+	height: 100vh;
+}
+
+.flex {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.main {
+	align-items: stretch;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	flex-shrink: 0;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+.signup-to-see-content {
+	font-weight: 600;
+	color: #737373;
+	text-align: center;
+}
+
+.login-area {
+	margin-top: 0;
+}
+
+.notify {
+	margin: 10px 40px;
+	font-size: 12px;
+	color: #737373
+}
+
+.login-wrap {
+	width: 100%;
+	display: flex;
+	justify-content: center
+}
+
+.img-wrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 10%; height : 36px;
+	background-color: #FAFAFA;
+	border: 1px solid #dbdbdb;
+	border-radius: 0px 3px 3px 0px;
+	border-left-style: none;
+	height: 36px
+}
+
+.after-check {
+	box-sizing: content-box;
+	width: 65%;
+	height: 20px;
+	margin-bottom: 6px;
+	padding: 9px 8px 7px;
+	border: 1px solid #dbdbdb;
+	background-color: #FAFAFA;
+	outline: none;
+	width: 65%;
+	border-right-style: none;
+	border-radius: 3px 0px 0px 3px;
+}
+
+/* 자동완성 시 input background 색상 설정 */
+/* Chrome, Opera, Safari */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-text-fill-color: #000;
+    -webkit-box-shadow: 0 0 0px 1000px #FAFAFA inset;
+    box-shadow: 0 0 0px 1000px #FAFAFA inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Firefox */
+input:-moz-autofill,
+input:-moz-autofill-preview {
+    background-color: #FAFAFA !important;
+}
+
+.flex-article{
+	margin:0;
+	padding:0
+}

@@ -1,25 +1,31 @@
 @charset "UTF-8";
 
-@media(max-width: 875px){
-	.phone{
-		display:none !important;
+body{
+	margin:0;
+	padding:0;
+}
+
+@media ( max-width : 875px) {
+	.phone {
+		display: none !important;
 	}
 }
 
-.phone{
-	position:relative;
+.phone {
+	position: relative;
 	display: flex;
+	height: 630px
 }
 
-.slide-img{
+.slide-img {
 	position: absolute;
 	top: 4%;
-  right: 12.7%;
-  display: none;
+	right: 12.3%;
+	display: none;
 }
 
-.logo-txt-area{
-	margin: 36px 0px 12px 
+.logo-txt-area {
+	margin: 36px 0px 12px
 }
 
 .logo-text {
@@ -31,12 +37,12 @@
 }
 
 ._ab1y {
-	color: rgb(var(- -ig-primary-text));
 	display: flex;
 	flex-direction: column;
 	flex-grow: 1;
 	justify-content: center;
 	margin-top: 12px;
+	min-width: 350px;
 	max-width: 350px;
 }
 
@@ -68,26 +74,28 @@
 	align-items: center
 }
 
-.flex2{
+.flex2 {
 	border: 0;
-  display: flex;
-  flex-direction: column;
-  font: inherit;
-  font-size: 100%;
-  margin: 0;
-  padding: 0;
-  vertical-align: baseline;
+	display: flex;
+	flex-direction: column;
+	font: inherit;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
 }
 
-.flex-article{
+.flex-article {
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	width: 100%;
-	margin-top:32px;
+	height: 100vh;
+	margin-top: 32px;
 	padding-bottom: 32px
 }
 
-.login-area{
+.login-area {
 	margin-top: 24px;
 }
 
@@ -103,118 +111,126 @@
 	outline: none;
 }
 
-.submit{ 
+.submit {
 	width: 80%;
 	height: 32px;
 	margin: 8px 10%;
-
 }
 
-.submit-btn{
+.submit-btn, .submit-fb, .go-verify, .do-verify {
 	width: 100%;
 	height: 32px;
-	border-style:none;
+	border-style: none;
 	border-radius: 8px;
 	background-color: #8ab4f3;
-	color:white;
-	font-size:15px;
+	color: white;
+	font-size: 15px;
 	font-weight: 900
 }
 
-.active{
-	background-color:#0095F6
+.active, .submit-fb {
+	background-color: #0095F6
 }
 
-.active:hover{
+.submit-fb {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 600
+}
+
+.active:hover, .submit-fb:hover {
 	cursor: pointer;
-	background-color:#1b74e4; 
+	background-color: #1b74e4;
 }
 
-.or{
-	display:flex;
+.or {
+	display: flex;
 	align-items: center;
 	width: 80%;
 	height: 15px;
 	margin: 10px 10% 18px;
 }
 
-.line{
-	box-sizing:border-box;
+.line {
+	box-sizing: border-box;
 	width: 40%;
-	height:1px;
-  border-bottom: 1px solid;
-  border-color: #dbdbdb;
+	height: 1px;
+	border-bottom: 1px solid;
+	border-color: #dbdbdb;
 }
 
-.or-text{
-	width:26px;
+.or-text {
+	width: 26px;
 	margin: 0 18px;
 	color: #737373;
 	font-size: 12px;
 	font-weight: 700;
 }
 
-.facebook-login, .login-fail{
+.facebook-login, .login-fail {
 	display: flex;
 	align-items: center;
 	margin: 8px 0
 }
 
-.submit-facebook{
+/* .login-fail{
+	display: none
+} */
+.submit-facebook {
 	display: flex;
 	align-items: center;
 	background-color: white;
 	border-style: none;
 }
 
-.submit-facebook:hover{
-	cursor:pointer;
+.submit-facebook:hover {
+	cursor: pointer;
 	opacity: .8;
 	transition: .3s;
 }
 
-.facebook-icon{
-	display:inline-block;
+.facebook-icon {
+	display: inline-block;
 	margin-right: 3px;
 	width: 20px;
 }
 
-.facebook-txt, .login-fail-txt{
+.facebook-txt, .login-fail-txt {
 	display: inline-block;
 	color: #385185;
-	font-size:14px;
+	font-size: 14px;
 	font-weight: 600
 }
 
-.login-fail-txt{
-	display:none;
+.login-fail-txt {
 	color: red;
 	font-weight: 500
 }
 
-.forgot-pw{
-	display:inline-block;
+.forgot-pw {
+	display: inline-block;
 	width: 100%;
 	margin-top: 12px;
 	text-align: center;
 }
 
-.forgot-pw-txt{
+.forgot-pw-txt {
 	display: inline-block;
 	color: #385185;
-	font-size:12px;
+	font-size: 12px;
 }
 
-.join-txt{
-	font-size:14px;
+.signup-txt, .login-txt {
+	font-size: 14px;
 }
 
-.go-join{
+.go-signup, .go-login {
 	text-decoration: none;
 	color: #0095F6;
 	font-weight: 600
 }
 
-.hidden{
+.hidden {
 	display: none;
 }

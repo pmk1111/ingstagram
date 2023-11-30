@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<link rel="stylesheet" th:href="@{'/assets/css/ingstagram.css'}" />
+<link rel="stylesheet" th:href="@{'/assets/css/setbirth.css'}" />
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+</head>
+<body>
+	<section class="set-birth" th:fragment="set-birth">
+		<main class="set-birth-main">
+			<article class="flex-article">
+				<div class="_ab1y">
+					<div class="_ab21">
+						<div class="content">
+							<img class="cake" th:src="@{'/assets/img/cake.png'}">
+							<div class="mg-16-8">
+								<span class="h-11 add-birth-txt">생일 추가</span>
+							</div>
+							<div class="mg-16-8">
+								<span class="h-11">공개 프로필에 포함되지 않습니다.</span>
+							</div>
+							<button class="modal-btn" @click="openModal">
+								<span class="why-add-birth-txt">왜 생년월일을 입력해야 하나요?</span>
+							</button>
+							
+							<div class="mg-8-8">
+								<div class="flex-column mg-8-8">
+									<div class="birth-wrap">
+										<span class="birth-selector">
+											<img class="dropdown" th:src="@{'/assets/img/dropdown.svg'}">
+											<select class="month selector" title="월:" v-model="selectedMonth" @change="updateDays">
+												<option v-for="month in months" :key="month" :value="month">{{ month }}월</option>
+											</select>
+										</span>
+										<span class="birth-selector">
+											<img class="dropdown" th:src="@{'/assets/img/dropdown.svg'}">
+											<select class="date selector" title="일:" v-model="selectedDay" @change="updateDays">
+												<option v-for="day in days" :key="day">{{ day }}</option>
+											</select>
+										</span>
+										<span class="birth-selector">
+											<img class="dropdown" th:src="@{'/assets/img/dropdown.svg'}">
+											<select class="year selector" title="연:" v-model="selectedYear" @change="updateDays" name="year">
+												<option v-for="year in years">{{ year }}</option>
+											</select>
+										</span>
+									</div>
+									<div class="mg-4-8">
+										<span class="font-12">태어난 날짜를 입력해야 합니다.</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="notify">
+								<div class="mg-8-8">
+									<span class="font-12 inline-block">비즈니스나 반려동물 등을 위한 계정인 경우에도<br>회원님의 생년월일을 사용하세요</span>
+								</div>
+							</div>
+							
+							<div class="submit p-16-8 w-100">
+								<button type="button" class="go-verify"
+												:class="{ 'active': orderThenFifth}"
+												@click="saveBirth">가입</button>
+							</div>
+							<div class="back-to-info">
+								<button class="go-info-btn"
+												@click="backToInfo">돌아가기</button>
+							</div>
+						</div>	
+					</div>				
+					<div class="_ab21">
+						<span class="join">
+							<p class="login-txt">
+								계정이 있으신가요? <a class="go-login" th:href="@{'/login'}">로그인</a>
+							</p>
+						</span>
+					</div>					
+				</div>
+				<!-- login-form end-->
+			</article>
+			<div class="birth-modal">
+				<div class="birth-modal-overlay"></div>
+				<div class="birth-modal-content"
+							:class="{ 'modal-animation': isModalOpen }">
+					<div class="birth-modal-top">
+						<span>생일</span>
+						<img class="close-modal" th:src="@{/assets/img/close.svg}" @click="closeModal">
+					</div>
+					
+					<div class="birth-modal-main mg-20-28">
+						<img class="cake" th:src="@{'/assets/img/cake.png'}">
+						<div class="p-8">
+							<span style="font-weight: 500; font-size: 20px">Instagram에 표시되는 생일</span>
+						</div>
+						<div class="p-8-12">
+							<span style="display: inline-block; width: 320px; font-size: 14px; text-align: center;">
+							생일을 입력하면 기능과 회원님에게 표시되는 광고가 개선되며 Instagram 커뮤니티를 안전하게 유지하는 데 도움이 됩니다. 
+							입력한 생일은 개인 정보 계정 설정에서 확인할 수 있습니다.</span>
+						</div>
+					</div>
+						
+				</div>
+			</div>
+		</main>
+	</section>
+	
+	<footer></footer>
+	<script type="text/javascript" th:src="@{'/assets/js/signup.js'}"></script>
+
+</body>
+</html>

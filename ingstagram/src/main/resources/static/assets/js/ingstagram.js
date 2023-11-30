@@ -33,9 +33,9 @@ $(document).ready(function () {
 			$('.submit-btn').addClass('active');
 
 			//로그인 버튼 클릭 시, 실패 텍스트 표시(임시)
-			$('.submit-btn').click(function () {
-				$('.login-fail-txt').css('display', 'block');
-			});
+//			$('.submit-btn').click(function () {
+//				$('.login-fail').css('display', 'block');
+//			});
 		} else {
 			$('.submit-btn').removeClass('active');
 		}

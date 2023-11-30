@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+.verify{
+	display: none
+}
+
+.mail-img {
+	width: 105px
+}
+
+.code-wrap {
+	display: flex;
+	justify-content: center;
+}
+
+.p-4-12 {
+	padding: 4px 12px
+}
+
+.code {
+	width: 100%;
+	height: 30px;
+	border: 1px solid #dbdbdb;
+	border-radius: 3px;
+	background: #FAFAFA
+}
+
+.mg-t-16 {
+	margin-top: 16px
+}
+
+.mg-16-16 {
+	margin: 16px
+}
+
+.mg-8 {
+	margin: 8px 0;
+}
+
+.f-14 {
+	text-align: center;
+	font-size: 14px;
+}
+
+.form-wrap {
+	display: flex;
+	flex-direction: column;
+	width: 100%
+}
+
+.p-16 {
+	padding: 16px 0;
+}
+
+.back-to-birth {
+	display: flex;
+	align-items: center;
+	justify-content: center
+}
+
+.code {
+	outline: none;
+}
