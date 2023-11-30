@@ -36,31 +36,31 @@ new Vue({
         this.iconPath = this.contextPath + '/assets/img/facebook2.svg';
         this.validate = this.contextPath + '/assets/img/good.svg';
         this.invalidate = this.contextPath + '/assets/img/bad.svg';
-        
+
         this.selectedMonth = new Date().getMonth() + 1;
         this.selectedDay = new Date().getDate();
         this.updateDays();
-              
+
     },
-		watch: {
-    	selectedYear: function () {
-        this.$nextTick(function () {
-            const year = document.querySelector('[name=year]').value;
-            console.log(year);
+    watch: {
+        selectedYear: function () {
+            this.$nextTick(function () {
+                const year = document.querySelector('[name=year]').value;
+                console.log(year);
 
-            const isOrderThenFifth = new Date().getFullYear() - parseInt(year) > 5;
-            console.log(isOrderThenFifth);
+                const isOrderThenFifth = new Date().getFullYear() - parseInt(year) >= 5;
+                console.log(isOrderThenFifth);
 
-            this.orderThenFifth = isOrderThenFifth
-        });
-    	},
-    	checkVerifyLength: function(){
-        const code = document.querySelector('[name=code]').value
-        console.log('인증번호 체크' + code.length)
-				this.checkVerify = /^\d+$/.test(code) && code.length >= 6;
-				console.log(this.checkVerify)
-       }
-		},
+                this.orderThenFifth = isOrderThenFifth
+            });
+        },
+        checkVerifyLength: function () {
+            const code = document.querySelector('[name=code]').value
+            console.log('인증번호 체크' + code.length)
+            this.checkVerify = /^\d+$/.test(code) && code.length >= 6;
+            console.log(this.checkVerify)
+        }
+    },
     methods: {
         changeIcon(state) {
             this.iconPath = this.contextPath + '/assets/img/facebook2' + state + '.svg';
@@ -124,13 +124,13 @@ new Vue({
                 this.userInfo.nic = document.querySelector('[name=nic]').value;
                 this.userInfo.phone = document.querySelector('[name=phone]').value;
                 this.userInfo.pw = document.querySelector('[name=pw]').value;
-								
-								let infoLayer = document.querySelector('.info-layer');
-								let birthLayer = document.querySelector('.set-birth');
-								
-    						infoLayer.style.display = 'none';
-    						birthLayer.style.display = 'block';
-								
+
+                let infoLayer = document.querySelector('.info-layer');
+                let birthLayer = document.querySelector('.set-birth');
+
+                infoLayer.style.display = 'none';
+                birthLayer.style.display = 'block';
+
                 console.table(this.userInfo);
             }
         },
@@ -140,59 +140,59 @@ new Vue({
             var daysInMonth = new Date(selectedYear, selectedMonth, 0).getDate();
             this.days = Array.from({ length: daysInMonth }, (_, i) => i + 1);
         },
-        saveBirth(){
-        	console.log('orderThenFifth:', this.orderThenFifth);
-        	if(this.orderThenFifth){
-						const userBirth = this.selectedYear + "-" + this.selectedMonth + "-" + this.selectedDay;
-        		this.userInfo.birth = userBirth;
-        		console.table(this.userInfo);
-        		
-        		let birthLayer = document.querySelector('.set-birth');
-        		let verifyLayer = document.querySelector('.verify');
-        		
-        		birthLayer.style.display = 'none';
-        		verifyLayer.style.display = 'block';
-        	}
+        saveBirth() {
+            console.log('orderThenFifth:', this.orderThenFifth);
+            if (this.orderThenFifth) {
+                const userBirth = this.selectedYear + "-" + this.selectedMonth + "-" + this.selectedDay;
+                this.userInfo.birth = userBirth;
+                console.table(this.userInfo);
+
+                let birthLayer = document.querySelector('.set-birth');
+                let verifyLayer = document.querySelector('.verify');
+
+                birthLayer.style.display = 'none';
+                verifyLayer.style.display = 'block';
+            }
         },
-        handlePhoneInput(){
-        	const phoneVal = document.querySelector('[name=phone]').value
-        	if(phoneVal === ''){
-        	this.inputs[3].isValid = true; 
-        		this.inputs[3].isChecked = true; 
-        		this.isSubmitButtonActive = this.inputs.every(input => input.isValid);
-        	}
+        handlePhoneInput() {
+            const phoneVal = document.querySelector('[name=phone]').value
+            if (phoneVal === '') {
+                this.inputs[3].isValid = true;
+                this.inputs[3].isChecked = true;
+                this.isSubmitButtonActive = this.inputs.every(input => input.isValid);
+            }
         },
-        backToInfo(){
-        	let infoLayer = document.querySelector('.info-layer');
-        	let birthLayer = document.querySelector('.set-birth');
-        	
-        	if(birthLayer.style.display == 'block' && infoLayer.style.display == 'none'){
-    				infoLayer.style.display = 'flex';
-    				birthLayer.style.display = 'none';		
-        	} 
+        backToInfo() {
+            let infoLayer = document.querySelector('.info-layer');
+            let birthLayer = document.querySelector('.set-birth');
+
+            if (birthLayer.style.display == 'block' && infoLayer.style.display == 'none') {
+                infoLayer.style.display = 'flex';
+                birthLayer.style.display = 'none';
+            }
         },
-        backToBirth(){
-        	let birthLayer = document.querySelector('.set-birth');
-        	let verifyLayer = document.querySelector('.verify');
-        	
-        	if(verifyLayer.style.display == 'block' && birthLayer.style.display == 'none'){
-    				birthLayer.style.display = 'block';
-    				verifyLayer.style.display = 'none';		
-        	} 
+        backToBirth() {
+            let birthLayer = document.querySelector('.set-birth');
+            let verifyLayer = document.querySelector('.verify');
+
+            if (verifyLayer.style.display == 'block' && birthLayer.style.display == 'none') {
+                birthLayer.style.display = 'block';
+                verifyLayer.style.display = 'none';
+            }
         },
-        openModal(){
-       		birthModal= document.querySelector('.birth-modal')
-        	if(birthModal.style.display = 'none'){
-        		birthModal.style.display = 'block';
-        		this.isModalOpen = true;
-        	}
+        openModal() {
+            birthModal = document.querySelector('.birth-modal')
+            if (birthModal.style.display = 'none') {
+                birthModal.style.display = 'block';
+                this.isModalOpen = true;
+            }
         },
-        closeModal(){
-        	birthModal= document.querySelector('.birth-modal')
-        	if(birthModal.style.display = 'block'){
-        		birthModal.style.display = 'none';
-        		this.isModalOpen = false;
-        	}
+        closeModal() {
+            birthModal = document.querySelector('.birth-modal')
+            if (birthModal.style.display = 'block') {
+                birthModal.style.display = 'none';
+                this.isModalOpen = false;
+            }
         }
     }
 
