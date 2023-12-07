@@ -29,7 +29,9 @@
 										<input type="text" class="code p-4-12" name="code" placeholder="인증 코드" v-model="checkVerifyLength">
 									</div>
 									<div class="p-16 w-100">		
-										<button type="button" class="do-verify" :class="{ 'active': checkVerify }">다음</button>
+										<button type="button" class="do-verify" 
+														:class="{ 'active': checkVerify }"
+														@click="isValidNum">다음</button>
 									</div>
 									<div class="back-to-birth">
 										<button type="button" class="go-birth-btn"

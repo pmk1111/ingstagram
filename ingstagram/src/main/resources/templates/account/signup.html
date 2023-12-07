@@ -16,6 +16,8 @@
 <link rel="stylesheet" th:href="@{'/assets/css/setbirth.css'}" />
 <link rel="stylesheet" th:href="@{'/assets/css/verify.css'}" />
 <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 </head>
 <body>
 <div class="app">
@@ -50,7 +52,7 @@
 							<div class="flex login-area">					
 								<template v-for="(input, index) in inputs">
   								<div class="login-wrap">
-    								<input :type="input.name === 'pw' ? 'password' : 'text'" 
+    								<input :type="input.name === 'password' ? 'password' : 'text'" 
       										:class="{ 'after-check': input.isChecked, 'login-input': !input.isChecked, 'invalid': !input.isChecked }" 
       										v-model="input.value" 
       										@blur="validateInput(index)" 
@@ -59,7 +61,7 @@
       										:placeholder="input.placeholder"
       										v-if="input.name !== 'phone'"
     								>
-    								<input :type="input.name === 'pw' ? 'password' : 'text'" 
+    								<input :type="input.name === 'password' ? 'password' : 'text'" 
       										:class="{ 'after-check': input.isChecked, 'login-input': !input.isChecked, 'invalid': !input.isChecked }" 
       										v-model="input.value" 
       										@blur="validateInput(index)" 
@@ -87,7 +89,7 @@
 										@click="saveAccountInfo">가입</button>
 								</div>
 							</div>
-							<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+							
 						</div>
 					</div>
 				</div>
@@ -106,7 +108,7 @@
 	<section th:replace="~{fragments/set-birth :: set-birth}"></section>
 	<section th:replace="~{fragments/verify :: verify}"></section>
 </div>
-	<script type="text/javascript" th:src="@{'/assets/js/signup.js'}"></script>
+	<script type="module" th:src="@{'/assets/js/signup.js'}"></script>
 	<script type="text/javascript" th:src="@{'/assets/js/loading.js'}"></script>
 
 	

@@ -174,9 +174,9 @@ body{
 	margin: 8px 0
 }
 
-/* .login-fail{
+.login-fail{
 	display: none
-} */
+} 
 .submit-facebook {
 	display: flex;
 	align-items: center;
@@ -233,4 +233,11 @@ body{
 
 .hidden {
 	display: none;
+}
+
+.login-form{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%
 }

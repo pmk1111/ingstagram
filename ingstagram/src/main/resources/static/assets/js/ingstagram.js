@@ -1,4 +1,7 @@
 $(document).ready(function () {
+	var csrfToken = $("meta[name='_csrf']").attr("content");
+  var csrfHeader = $("meta[name='_csrf_header']").attr("content");
+  
 	$('.logo-text').click(function () {
 		let hostIndex = location.href.indexOf(location.host) + location.host.length;
 		let contextPath = location.href.substring(hostIndex, location.href.indexOf('/', hostIndex + 1));
@@ -23,27 +26,31 @@ $(document).ready(function () {
 
 	// id, pw 갯수 유효성 검사
 	function updateSubmitButton() {
-		let idContent = $('.id').val();
-		let pwContent = $('.password').val();
+    let emailContent = $('.email').val();
+    let pwContent = $('.password').val();
 
-		let idContentLength = idContent.length;
-		let pwContentLength = pwContent.length;
+    let emailContentLength = emailContent.length;
+    let pwContentLength = pwContent.length;
 
-		if (pwContentLength >= 6 && idContentLength >= 1) {
-			$('.submit-btn').addClass('active');
+    if (pwContentLength >= 6 && emailContentLength >= 1) {
+        $('.submit-btn').addClass('active');
+    } else {
+        $('.submit-btn').removeClass('active');
+    }
+}
 
-			//로그인 버튼 클릭 시, 실패 텍스트 표시(임시)
-//			$('.submit-btn').click(function () {
-//				$('.login-fail').css('display', 'block');
-//			});
-		} else {
-			$('.submit-btn').removeClass('active');
-		}
-	}
+	$('form.login-form').submit(function (event) {
+    // id, pw 갯수 유효성 검사
+    updateSubmitButton();
 
-	$('.id, .password').keyup(function () {
-		updateSubmitButton();
+    // 조건이 충족되지 않으면 제출을 막음
+    if ($('.submit-btn').hasClass('active') === false) {
+        event.preventDefault();
+    }
 	});
 
+	$('.id, .password').keyup(function () {
+    	updateSubmitButton();
+	});
 
 });
