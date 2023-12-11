@@ -212,16 +212,19 @@ new Vue({
       let code = document.querySelector('.code');
       if (this.checkVerify) {
         this.$axios
-          .post(this.contextPath + "/account/check-verify-num", { code: code.value })
+          .post(this.contextPath + "/account/check-verify-num", { code: code.value }, 
+          			{headers: {'X-CSRF-TOKEN': this.csrfToken,},
+          })
           .then((res) => {
-            console.log('인증번호 체크 결과: ' + res);
-            if (res) {
+            console.log('인증번호 체크 결과: ' + res.data);
+            if (res.data) {
               console.log('인증번호 입력 성공');
              	console.table(this.userInfo);
               this.$axios
                 .post(this.contextPath + "/account/signup-success", this.userInfo)
                 .then((res) => {
-                  if(res){
+                	console.log('회원가입 결과: ' + res.data);
+                  if(res.data == true){
                   	console.log('회원가입 성공, 로그인 페이지로 이동')
                   	window.location.href = this.contextPath + "/login";
                   } else{

@@ -28,7 +28,7 @@ public class EmailService {
 
     //인증번호 생성
     private final String ePw = createKey();
-
+    
     @Value("${spring.mail.username}")
     private String id;
     
@@ -39,7 +39,7 @@ public class EmailService {
         MimeMessage  message = javaMailSender.createMimeMessage();
 
         message.addRecipients(MimeMessage.RecipientType.TO, to); 
-        message.setSubject("ㅇㅇㅇ 회원가입 인증 코드: "); 
+        message.setSubject("Ingstagram 회원가입 인증 코드"); 
 
         String msg="";
         msg += "<h1 style=\"font-size: 30px; padding-right: 30px; padding-left: 30px;\">이메일 주소 확인</h1>";

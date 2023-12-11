@@ -51,6 +51,7 @@ public class SecurityConfig {
 		.antMatchers("/account/check-nic").permitAll()
 		.antMatchers("/account/email-verify").permitAll()
 		.antMatchers("/account/check-verify-num").permitAll()
+		.antMatchers("/account/signup-success").permitAll()
 		.anyRequest().authenticated();
 
 		http

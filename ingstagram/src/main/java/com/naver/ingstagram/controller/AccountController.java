@@ -77,6 +77,8 @@ public class AccountController {
 	@ResponseBody
 	public boolean signupSuccess(@RequestBody MemberJoinDto memberJoinDto) throws Exception{
 		try {
+			log.info("signup-success 컨트롤러");
+			log.info(memberJoinDto.toString());
 			memberService.signUp(memberJoinDto);
 	        log.info("회원가입 성공");
 	        return true;
