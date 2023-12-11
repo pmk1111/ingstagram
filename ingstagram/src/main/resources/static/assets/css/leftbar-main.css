@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+.mg-pd{
+	margin: 0px 0 26px 0;
+	padding: 12.5px 0 0 0;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.leftbar-grp {
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	min-height: 512px;
+	border: 1px solid lightgrey;
+	overflow: hidden;
+	overflow-y: hidden;
+}
+
+.leftbar-padding {
+	height: 100%;
+	padding: 8px 12px 20px
+}
+
+.logo-txt-grp, .logo-img-grp, .home-grp, .search-grp, .explore-grp,
+	.rels-grp, .alarm-grp, .dm-grp, .create-pid-grp, .setting-grp {
+	display: flex;
+}
+
+.logo-img-grp{
+	width: 24px
+}
+
+.logo-pd-mg {
+	margin-bottom: 19px;
+	padding: 25px 12px 16px 0px;
+}
+
+.logo-txt {
+	position: relative;
+	left: 10px;
+	width: 115px
+}
+
+
+.profile-img {
+	width: 24px;
+	border-radius: 50%
+}
+
+.menu-grp1, .menu-grp2 {
+	display: flex;
+	flex-direction: column;
+}
+
+.menu-grp1 {
+	min-height: 83%
+}
+
+.menu-item-grp {
+	padding: 12px;
+	margin: 4px 0;
+	border-radius: 5px
+}
+
+.icon-grp {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.menu-item-txt-grp {
+	padding-left: 16px
+}
+
+.menu-item-txt-grp span {
+	display: inline-block;
+}
+
+.menu-item-grp:hover {
+	cursor: pointer;
+	background-color: #f1f1f1;
+	transition: .2s;
+}
+
+@media ( max-width : 1162px) {
+	.account-rcmd-grp {
+		display: none;
+	}
+	.main-grp {
+		width: 100%;
+		min-width: 762px
+	}
+}
+
+@media ( max-width :1263px) {
+	.leftbar-grp {
+		box-sizing: border-box;
+		min-width: 72px;
+		max-width: 72px;
+	}
+	.main-grp {
+		width: 100%;
+		margin-left: 72px;
+	}
+	.menu-item-txt-grp {
+		display: none;
+	}
+	
+}
+
+@media ( min-width : 1264px) and (max-width: 1919px) {
+	.leftbar-grp {
+		min-width: 244.884px;
+		max-width: 245px
+	}
+}
+
+@media ( min-width : 1920px) {
+	.leftbar-grp {
+		min-width: 336.6px;
+		max-width: 338.2px
+	}
+}
+
+
+
+
+.fade-enter-active, .fade-leave-active, .appear-active {
+	transition: opacity 0.5s, transform 0.5s;
+}
+
+.fade-enter, .fade-leave-to {
+	opacity: 0;
+	transform: translateY(0);
+	position: absolute;
+}
+
+.appear-active, .appear-to {
+	transition: opacity 0.5s, transform 0.5s;
+	opacity: 1;
+	transform: translateY(0);
+	position: absolute;
+}
+
+.appear-to {
+	opacity: 0;
+	transform: translateY(0);
+}

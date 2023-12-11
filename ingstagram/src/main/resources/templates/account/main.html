@@ -1,10 +1,441 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+  <meta charset="UTF-8">
+  <title>Insert title here</title>
+  <link rel="stylesheet" th:href="@{'/assets/css/leftbar-main.css'}">
+	<link rel="stylesheet" th:href="@{'/assets/css/main.css'}">
 </head>
+
 <body>
-로그인 성공...!
+  <div class="main-page-grp">
+    <div th:replace="~{fragments/leftbar-main :: leftbar-main}"></div>
+
+    <div class="main-grp">
+      <section class="main-section">
+        <main class="main-content">
+          <div class="content-grp">
+            <div class="story-pid-grp">
+              <div class="mg-top-16">
+                <div class="story-grp mg-btm-24">
+                  <div class="pd-tb-8" style="height: 85px">
+                    <div class="story">
+                      <ul>
+
+                        <li style="transform: translateX(2px);">
+                          <div class="story-item pd-lr-4">
+                            <button class="story-btn pd-lr-6" role="menuitem" tabindex="0">
+                              <div class="ddd" aria-disabled="true" role="button" tabindex="-1">
+                                <span role="link" tabindex="-1"
+                                  style="display:inline-block; height: 56px; width: 56px;">
+                                  <img class="story-profile-img" crossorigin="anonymous" draggable="false"
+                                    th:src="@{'/assets/img/korean-jombie.jpg'}">
+                                </span>
+                              </div>
+                              <div class="" dir="auto">
+                                <div class=""
+                                  style="text-align: center; width: 68.5px; padding:0 2px; font-size: 12px;">
+                                  koreanzom...
+                                </div>
+                              </div>
+                            </button>
+                          </div>
+                        </li>
+
+                        <li style="transform: translateX(12px);">
+                          <div class="story-item pd-lr-4">
+                            <button class="story-btn pd-lr-6" role="menuitem">
+                              <div class="ddd" aria-disabled="true" role="button">
+                                <span role="link" tabindex="-1"
+                                  style="display:inline-block; height: 56px; width: 56px;">
+                                  <img class="story-profile-img" crossorigin="anonymous" draggable="false"
+                                    th:src="@{'/assets/img/korean-jombie.jpg'}">
+                                </span>
+                              </div>
+                              <div class="" dir="auto">
+                                <div class=""
+                                  style="text-align: center; width: 68.5px; padding:0 2px; font-size: 12px;">
+                                  koreanzom...
+                                </div>
+                              </div>
+                            </button>
+                          </div>
+                        </li>
+
+                        <li>
+                        </li>
+                      </ul>
+
+                    </div>
+                  </div>
+                </div>
+                
+          			<div class="pid-grp">
+          				<div class="pid-grp-wrap">
+          					<div>
+          						<div class="pid-items">
+          							<article class="pid-item">
+          								<div class="pid-item-grp">
+          									<div class="writer-grp">
+          										<div class="writer-grp-wrap">
+          											<div class="writer-img-grp">
+          												<div class="ddd-small" aria-disabled="true" role="button" tabindex="-1">
+          													<img class="writer-img" th:src="@{'/assets/img/default-profile-img.jpg'}">
+          												</div>
+          											</div>
+          											<div class="writer-name-place-grp">
+          												<div class="writer-name-date">
+          													<span class="writer-name">ingstagram</span>
+          													<div class="created-at-wrap">
+          														<span class="dot">&#183;</span>
+          														<span class="created-at">6일</span>
+          													</div>
+          												</div>
+          												<div class="place">
+          													<span>Busan</span>
+          												</div>
+          											</div>
+          										</div>
+          									</div>
+          									
+          									<div class="pid-content">
+          										<img class="pid-contetn-item" th:src="@{'/assets/img/sample.png'}">
+          									</div>
+          									
+          									<div class="desc-utils">
+          										<div class="desc-utils-flex">
+          											<div class="util-icons">
+          												<div class="like-comment-dm">
+          													<div class="like pd-8">
+          														<span class=""><svg aria-label="좋아요" class="x1lliihq x1n2onr6 xyb1xck" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>좋아요</title><path d="M16.792 3.904A4.989 4.989 0 0 1 21.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 0 1 4.708-5.218 4.21 4.21 0 0 1 3.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 0 1 3.679-1.938m0-2a6.04 6.04 0 0 0-4.797 2.127 6.052 6.052 0 0 0-4.787-2.127A6.985 6.985 0 0 0 .5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 0 0 3.518 3.018 2 2 0 0 0 2.174 0 45.263 45.263 0 0 0 3.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 0 0-6.708-7.218Z"></path></svg></span>
+          													</div>
+          													<div class="comment pd-8">
+          														<svg aria-label="댓글 달기" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>댓글 달기</title><path d="M20.656 17.008a9.993 9.993 0 1 0-3.59 3.615L22 22Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path></svg>
+          													</div>
+          													<div class="dm pd-8">
+          														<svg aria-label="게시물 공유" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>게시물 공유</title><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line><polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+          													</div>
+          												</div>
+          												<div class="bookmark pd-8">
+          													<svg aria-label="저장" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>저장</title><polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+          												</div>
+          											</div>
+          											<div class="like-cnt">
+          												<span class="like-cnt-txt">좋아요 1500개</span>
+          											</div>
+          											<div class="pid-content">
+          												<div class="pid-writer"><span>afas</span></div>
+          												<span class="content">가나다라마바사<br>abcdefg</span>
+          											</div>
+          											<div class="comment-grp">
+          												<textarea class="comment-txtarea" placeholder="댓글 달기..." rows="" cols=""></textarea>
+          											</div>
+          										</div>
+          									</div>
+          								</div>
+          							</article>
+          						</div>
+          					</div>
+          				</div>
+          			</div>
+          			
+          			          			<div class="pid-grp">
+          				<div class="pid-grp-wrap">
+          					<div>
+          						<div class="pid-items">
+          							<article class="pid-item">
+          								<div class="pid-item-grp">
+          									<div class="writer-grp">
+          										<div class="writer-grp-wrap">
+          											<div class="writer-img-grp">
+          												<div class="ddd-small" aria-disabled="true" role="button" tabindex="-1">
+          													<img class="writer-img" th:src="@{'/assets/img/default-profile-img.jpg'}">
+          												</div>
+          											</div>
+          											<div class="writer-name-place-grp">
+          												<div class="writer-name-date">
+          													<span class="writer-name">ingstagram</span>
+          													<div class="created-at-wrap">
+          														<span class="dot">&#183;</span>
+          														<span class="created-at">6일</span>
+          													</div>
+          												</div>
+          												<div class="place">
+          													<span>Busan</span>
+          												</div>
+          											</div>
+          										</div>
+          									</div>
+          									
+          									<div class="pid-content">
+          										<img class="pid-contetn-item" th:src="@{'/assets/img/sample.png'}">
+          									</div>
+          									
+          									<div class="desc-utils">
+          										<div class="desc-utils-flex">
+          											<div class="util-icons">
+          												<div class="like-comment-dm">
+          													<div class="like pd-8">
+          														<span class=""><svg aria-label="좋아요" class="x1lliihq x1n2onr6 xyb1xck" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>좋아요</title><path d="M16.792 3.904A4.989 4.989 0 0 1 21.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 0 1 4.708-5.218 4.21 4.21 0 0 1 3.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 0 1 3.679-1.938m0-2a6.04 6.04 0 0 0-4.797 2.127 6.052 6.052 0 0 0-4.787-2.127A6.985 6.985 0 0 0 .5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 0 0 3.518 3.018 2 2 0 0 0 2.174 0 45.263 45.263 0 0 0 3.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 0 0-6.708-7.218Z"></path></svg></span>
+          													</div>
+          													<div class="comment pd-8">
+          														<svg aria-label="댓글 달기" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>댓글 달기</title><path d="M20.656 17.008a9.993 9.993 0 1 0-3.59 3.615L22 22Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path></svg>
+          													</div>
+          													<div class="dm pd-8">
+          														<svg aria-label="게시물 공유" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>게시물 공유</title><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line><polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+          													</div>
+          												</div>
+          												<div class="bookmark pd-8">
+          													<svg aria-label="저장" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>저장</title><polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+          												</div>
+          											</div>
+          											<div class="like-cnt">
+          												<span class="like-cnt-txt">좋아요 1500개</span>
+          											</div>
+          											<div class="pid-content">
+          												<div class="pid-writer"><span>afas</span></div>
+          												<span class="content">가나다라마바사<br>abcdefg</span>
+          											</div>
+          											<div class="comment-grp">
+          												<textarea class="comment-txtarea" placeholder="댓글 달기..." rows="" cols=""></textarea>
+          											</div>
+          										</div>
+          									</div>
+          								</div>
+          							</article>
+          						</div>
+          					</div>
+          				</div>
+          			</div>
+                
+              </div>
+            </div>
+
+            <div class="account-rcmd-grp">
+              <div class="account-rcmd-wrap">
+                <div class="account-grp pd-lr-16">
+                  <div class="account-profile-img">
+                    <a style="width: 44px; height: 44px">
+                      <img th:src="@{'/assets/img/default-profile-img.jpg'}">
+                    </a>
+                  </div>
+
+                  <div class="name-nic-grp">
+                    <div class="nic-grp">
+                      <a>
+                        <span>ssss</span>
+                      </a>
+                    </div>
+                    <div class="name-grp">
+                      <a>
+                        <span>ssss</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="change-account-grp">
+                    <a>
+                      <span class="change-account">전환</span>
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="rcmd-grp">
+                <div class="flex w-100">
+                  <div class="flex-col w-100">
+                    <div class="rcmd-txt-grp pd-4-16">
+                      <div class="rcmd-txt">
+                        <span>회원님을 위한 추천</span>
+                      </div>
+                      <a class="see-all">
+                        <span>모두 보기</span>
+                      </a>
+                    </div>
+
+                    <div class="rcmd-user-grp">
+
+                      <div class="rcmd-user-wrap pd-tb-8">
+                        <div class="user-items pd-8-16">
+                          <div class="account-profile-img">
+                            <a style="width: 44px; height: 44px">
+                              <img th:src="@{'/assets/img/default-profile-img.jpg'}">
+                            </a>
+                          </div>
+
+                          <div class="name-nic-grp">
+                            <div class="nic-grp">
+                              <a>
+                                <span>ssss</span>
+                              </a>
+                            </div>
+                            <div class="name-grp">
+                              <a>
+                                <span>ssss</span>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="do-follow-grp">
+                            <a>
+                              <span class="follow">팔로우</span>
+                            </a>
+                          </div>
+
+                        </div>
+
+                        <div class="user-items pd-8-16">
+                          <div class="account-profile-img">
+                            <a style="width: 44px; height: 44px">
+                              <img th:src="@{'/assets/img/default-profile-img.jpg'}">
+                            </a>
+                          </div>
+
+                          <div class="name-nic-grp">
+                            <div class="nic-grp">
+                              <a>
+                                <span>ssss</span>
+                              </a>
+                            </div>
+                            <div class="name-grp">
+                              <a>
+                                <span>ssss</span>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="do-follow-grp">
+                            <a>
+                              <span class="follow">팔로우</span>
+                            </a>
+                          </div>
+
+                        </div>
+
+                        <div class="user-items pd-8-16">
+                          <div class="account-profile-img">
+                            <a style="width: 44px; height: 44px">
+                              <img th:src="@{'/assets/img/default-profile-img.jpg'}">
+                            </a>
+                          </div>
+
+                          <div class="name-nic-grp">
+                            <div class="nic-grp">
+                              <a>
+                                <span>ssss</span>
+                              </a>
+                            </div>
+                            <div class="name-grp">
+                              <a>
+                                <span>ssss</span>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="do-follow-grp">
+                            <a>
+                              <span class="follow">팔로우</span>
+                            </a>
+                          </div>
+
+                        </div>
+
+                        <div class="user-items pd-8-16">
+                          <div class="account-profile-img">
+                            <a style="width: 44px; height: 44px">
+                              <img th:src="@{'/assets/img/default-profile-img.jpg'}">
+                            </a>
+                          </div>
+
+                          <div class="name-nic-grp">
+                            <div class="nic-grp">
+                              <a>
+                                <span>ssss</span>
+                              </a>
+                            </div>
+                            <div class="name-grp">
+                              <a>
+                                <span>ssss</span>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="do-follow-grp">
+                            <a>
+                              <span class="follow">팔로우</span>
+                            </a>
+                          </div>
+
+                        </div>
+
+                        <div class="user-items pd-8-16">
+                          <div class="account-profile-img">
+                            <a style="width: 44px; height: 44px">
+                              <img th:src="@{'/assets/img/default-profile-img.jpg'}">
+                            </a>
+                          </div>
+
+                          <div class="name-nic-grp">
+                            <div class="nic-grp">
+                              <a>
+                                <span>ssss</span>
+                              </a>
+                            </div>
+                            <div class="name-grp">
+                              <a>
+                                <span>ssss</span>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="do-follow-grp">
+                            <a>
+                              <span class="follow">팔로우</span>
+                            </a>
+                          </div>
+
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="rcmd-footer">
+                <div class="rcmd-footer-grp pd-b-36">
+                  <nav>
+                    <ul>
+                      <li style="list-style: none"><a>소개</a></li>
+                      <li><a>도움말</a></li>
+                      <li><a>홍보 센터</a></li>
+                      <li><a>API</a></li>
+                      <li><a>채용 정보</a></li>
+                      <li><a>개인정보처리방침</a></li>
+                      <li><a>약관</a></li>
+                      <li><a>위치</a></li>
+                      <li><a>언어</a></li>
+                      <li><a>Meta Verified</a></li>
+                    </ul>
+                  </nav>
+                  <span class="copyright">© 2023 INSTAGRAM FROM META</span>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </main>
+      </section>
+    </div>
+  </div>
+  
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4"></script>
+  <script th:src="@{'/assets/js/leftbar-main.js'}"></script>
 </body>
+
 </html>

@@ -1,0 +1,463 @@
+@charset "UTF-8";
+
+.flex {
+	display: flex
+}
+
+.flex-col {
+	display: flex;
+	flex-direction: column;
+}
+
+.pd-4-16 {
+	padding: 4px 16px;
+}
+
+.w-100 {
+	width: 100%
+}
+
+.pd-8-16 {
+	padding: 8px 16px;
+}
+
+.pd-tb-8 {
+	padding: 8px 0;
+}
+
+.pd-b-36 {
+	padding-bottom: 36px
+}
+
+.pd-8 {
+	padding: 8px;
+}
+
+.main-page-grp {
+	display: flex;
+	height: 100vh
+}
+
+@media ( min-width : 1264px) and (max-width: 1919px) {
+	.main-grp {
+		margin-left: 247px;
+		min-width: calc(100% - 247px);
+		max-width: calc(100% - 245px);
+	}
+}
+
+@media ( min-width : 1920px) {
+	.main-grp {
+		margin-left: 340px;
+		min-width: calc(100% - 340px);
+		max-width: calc(100% - 338.2px);
+	}
+}
+
+.main-section, .main-content {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+}
+
+.main-section {
+	
+}
+
+.content-grp {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.story-pid-grp {
+	max-width: 630px;
+	width: 100%;
+}
+
+.mg-top-16 {
+	margin-top: 16px;
+}
+
+.account-rcmd-grp {
+	width: 319px;
+	padding-left: 64px;
+}
+
+.story-grp {
+	width: 100%;
+	height: 101px;
+}
+
+.mg-btm-24 {
+	margin-bottom: 24px;
+}
+
+.pd-tb-8 {
+	padding: 8px 0;
+}
+
+.story {
+	align-items: stretch;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 85px;
+	outline: none;
+	overflow-y: hidden;
+	position: relative;
+}
+
+.story-item {
+	display: flex;
+	justify-content: center;
+}
+
+.pd-lr-4 {
+	padding: 0 4px;
+}
+
+.story ul {
+	position: relative;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	padding-inline-start: 40px;
+	height: 85px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.story ul li {
+	position: relative;
+	display: inline-block;
+	top: -25px;
+	width: 66px;
+	height: 85px;
+	font-weight: 300;
+}
+
+.story-btn {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	width: 64px;
+	height: 84px;
+	background-color: rgba(255, 255, 255, 0.5);
+	border-style: none;
+}
+
+.pd-lr-6 {
+	padding: 0 6px;
+}
+
+.story-profile-img {
+	width: 56px;
+	border-radius: 50%
+}
+
+.ddd, .ddd-small {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	border: 2px solid transparent;
+	border-radius: 50%;
+	background-image: linear-gradient(#fff, #fff),
+		linear-gradient(to left, red 0%, orange 100%);
+	background-origin: border-box;
+	background-clip: content-box, border-box;
+}
+
+.ddd {
+	width: 59px;
+	height: 59px;
+}
+
+.ddd-small {
+	width: 36px;
+	height: 36px;
+}
+
+.account-rcmd-wrap {
+	display: flex;
+	margin-top: 36px;
+}
+
+.account-grp, .user-items {
+	display: flex;
+}
+
+.account-profile-img {
+	display: flex;
+	width: 56px;
+	height: 44px;
+	align-items: center;
+}
+
+.account-profile-img img {
+	width: 44px;
+	height: 44px
+}
+
+.account-profile-img a:hover {
+	cursor: pointer;
+}
+
+.name-nic-grp, .writer-name-place-grp {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 195px;
+	height: 38px
+}
+
+.name-nic-grp span {
+	position: relative;
+	display: inline-block;
+	top: -1px;
+	height: 19px
+}
+
+.nic-grp, .name-grp, .writer-name-date, .place {
+	display: flex;
+	height: 15px;
+}
+
+.nic-grp span, .writer-name {
+	font-size: 14px;
+	font-weight: 600
+}
+
+.name-grp span, .place span, .created-at {
+	font-size: 14px;
+	color: #737373;
+}
+
+.pd-lr-16 {
+	padding: 0 16px;
+}
+
+.change-account-grp, .do-follow-grp {
+	display: flex;
+	align-items: center;
+}
+
+.change-account, .follow {
+	display: inline-block;
+	margin-left: 12px;
+	font-weight: 700;
+	font-size: 12px;
+	color: #0095F6
+}
+
+.change-account:hover, .follow:hover {
+	cursor: pointer
+}
+
+.follow {
+	width: 40px
+}
+
+.rcmd-grp {
+	display: flex;
+	margin: 24px 0 8px 0;
+}
+
+.mg-lr-16 {
+	margin: 0 16px
+}
+
+.rcmd-txt-grp {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 11px
+}
+
+.rcmd-txt {
+	display: inline-block;
+}
+
+.rcmd-txt>span {
+	font-size: 14px;
+	font-weight: 600;
+	color: #737373
+}
+
+.see-all {
+	display: inline-block;
+}
+
+.see-all span {
+	display: inline-block;
+	font-weight: 600;
+	font-size: 12px
+}
+
+.rcmd-user-grp {
+	display: flex;
+	flex-direction: column;
+}
+
+.rcmd-footer {
+	display: flex;
+	margin-bottom: 8px;
+	padding: 0 16px;
+}
+
+.rcmd-footer-grp nav {
+	margin-bottom: 16px;
+}
+
+.rcmd-footer-grp ul {
+	margin: 0 0 0 3px;
+	padding: 0;
+}
+
+.rcmd-footer-grp ul li {
+	display: inline-block;
+	font-size: 12px;
+	color: #C7C7C7;
+}
+
+.copyright {
+	font-size: 12px;
+	color: #C7C7C7;
+}
+
+.pid-grp {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.pid-grp-wrap {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	align-self: auto;
+	width: 470px;
+	max-width: 100%
+}
+
+.pid-items {
+	display: flex;
+	flex-direction: column;
+}
+
+.pid-item-grp {
+	padding-bottom: 16px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid lightgrey
+}
+
+.writer-grp {
+	padding: 0 0 12px 0
+}
+
+.writer-grp-wrap {
+	display: flex;
+}
+
+.writer-img {
+	width: 32px;
+	height: 32px;
+	border-radius: 50%
+}
+
+.writer-img-grp {
+	margin-right: 12px;
+}
+
+.created-at-wrap {
+	display: flex;
+}
+
+.created-at {
+	position: relative;
+	top: 2px;
+}
+
+.dot {
+	display: flex;
+	justify-content: center;
+	width: 12px;
+	font-weight: 900;
+	color: #737373
+}
+
+.pid-contetn-item {
+	width: 468px;
+	height: 585px
+}
+
+.desc-utils-flex {
+	display: flex;
+	flex-direction: column;
+}
+
+.util-icons {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.like-comment-dm {
+	display: flex;
+}
+
+.like-cnt-txt {
+	display: flex;
+	flex-direction: column;
+}
+
+.like-cnt-txt {
+	font-size: 14px;
+	font-weight: 600
+}
+
+.pid-content {
+	margin-top: 8px
+}
+
+.pid-writer {
+	float: left;
+	display: inline-block;
+	margin-right: 4px
+}
+
+.pid-writer>span {
+	font-weight: 600;
+	color: #262626;
+}
+
+.pid-writer>span:hover {
+	cursor: pointer;
+	opacity: .6
+}
+
+.comment-grp {
+	margin-top: 8px;
+}
+
+.comment-txtarea {
+	height: 18px;
+	width: 100%;
+	border-style: none;
+	outline: none;
+	resize: none;
+}
+
+.comment-txtarea::placeholder {
+	font-weight: 500;
+	color: #737373;
+}
+
+textarea::placeholder {
+	font-family: 'Malgun Godhic', sans-serif;
+}
